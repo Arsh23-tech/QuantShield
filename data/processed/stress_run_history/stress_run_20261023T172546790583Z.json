@@ -1,0 +1,43 @@
+{
+    "metadata_version": 1,
+    "return_column": "simple_return",
+    "top_n": 10,
+    "tickers": [
+        "AAPL",
+        "MSFT",
+        "JPM",
+        "JNJ",
+        "XOM",
+        "SPY",
+        "QQQ",
+        "IWM"
+    ],
+    "weights": {
+        "AAPL": 0.125,
+        "MSFT": 0.125,
+        "JPM": 0.125,
+        "JNJ": 0.125,
+        "XOM": 0.125,
+        "SPY": 0.125,
+        "QQQ": 0.125,
+        "IWM": 0.125
+    },
+    "complete_observation_count": 2518,
+    "first_complete_date": "2016-10-04T00:00:00",
+    "last_complete_date": "2026-10-09T00:00:00",
+    "selected_scenario_dates": [
+        "2020-03-16T00:00:00",
+        "2020-03-12T00:00:00",
+        "2020-03-09T00:00:00",
+        "2020-06-11T00:00:00",
+        "2025-04-04T00:00:00",
+        "2020-03-18T00:00:00",
+        "2020-02-27T00:00:00",
+        "2020-03-11T00:00:00",
+        "2025-04-03T00:00:00",
+        "2018-02-05T00:00:00"
+    ],
+    "input_sha256": "3b1f1dd4b7722351f01a8238f937318e22a210dcd4e59bfc279bab7dba11d040",
+    "run_id": "20261023T172546790583Z",
+    "run_timestamp_utc": "2026-10-23T17:25:46.790583+00:00"
+}

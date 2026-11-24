@@ -1,0 +1,94 @@
+{
+  "provenance_version": 1,
+  "run_id": "20261027T183902287994Z",
+  "run_timestamp_utc": "2026-10-27T18:39:02.287994+00:00",
+  "source_data": {
+    "path": "data\\processed\\market_prices.parquet",
+    "sha256": "78e2c45bd538eb5d3cc4d3330246930632bd797f32bab80a80cc796e6f1ec8d0",
+    "size_bytes": 841635,
+    "file_modified_utc": "2026-10-12T23:06:24.696597+00:00",
+    "provider": "yfinance",
+    "provider_field": "source",
+    "provider_status": "recorded",
+    "retrieved_at_utc": null,
+    "retrieval_timestamp_status": "not_recorded_by_this_workflow",
+    "row_count": 20152,
+    "columns": [
+      "adjusted_close",
+      "close",
+      "date",
+      "high",
+      "ingested_at",
+      "low",
+      "open",
+      "source",
+      "ticker",
+      "volume"
+    ],
+    "tickers": [
+      "AAPL",
+      "IWM",
+      "JNJ",
+      "JPM",
+      "MSFT",
+      "QQQ",
+      "SPY",
+      "XOM"
+    ],
+    "first_date": "2016-10-03 00:00:00",
+    "last_date": "2026-10-09 00:00:00"
+  },
+  "calculation": {
+    "return_column": "simple_return",
+    "top_n": 10,
+    "weights": {
+      "AAPL": 0.125,
+      "MSFT": 0.125,
+      "JPM": 0.125,
+      "JNJ": 0.125,
+      "XOM": 0.125,
+      "SPY": 0.125,
+      "QQQ": 0.125,
+      "IWM": 0.125
+    },
+    "complete_observation_count": 2518,
+    "first_complete_date": "2016-10-04 00:00:00",
+    "last_complete_date": "2026-10-09 00:00:00",
+    "python_version": "3.12.2",
+    "pandas_version": "2.2.3",
+    "numpy_version": "2.2.6"
+  },
+  "input_snapshot": {
+    "path": "data\\processed\\stress_run_history\\stress_run_20261027T183902287994Z_inputs.json",
+    "sha256": "3b1f1dd4b7722351f01a8238f937318e22a210dcd4e59bfc279bab7dba11d040",
+    "file_sha256": "2fc42647f97787b0cd13ae9b2854da39135b4a914c32223d6271b2d0eccc6e3a"
+  },
+  "source_code": {
+    "validation_script": {
+      "path": "validate_stress_real_data.py",
+      "sha256": "1a6d632778a934c0d70bb4ebadc9a720ca765ae565550b4ee65d8b8ee6359e7a"
+    },
+    "returns_calculation": {
+      "path": "src\\features\\returns.py",
+      "sha256": "093bcad8f508fe9d9dfe52285d3eb17cf55dc0a745314b0903adc256280969fd"
+    },
+    "stress_testing": {
+      "path": "src\\risk\\stress_testing.py",
+      "sha256": "8c9ce48d75689a7f3e55688afcf4d14add454a2ef33272dac8b6c112e4991091"
+    },
+    "stress_metadata": {
+      "path": "src\\risk\\stress_metadata.py",
+      "sha256": "bc53efc20f050c4a0c3f49e1dea60c183ee8d6f296ffbfeff6bc19c1f90297b9"
+    }
+  },
+  "outputs": {
+    "scenarios": {
+      "path": "data\\processed\\stress_run_history\\stress_run_20261027T183902287994Z_scenarios.csv",
+      "sha256": "6e2db6d3e2b75156340b582239fb1727ea1ce7a8824d625533571c97a46fd9ad"
+    },
+    "contributions": {
+      "path": "data\\processed\\stress_run_history\\stress_run_20261027T183902287994Z_contributions.csv",
+      "sha256": "12312893b0da68db8d0074c216513ef0f69437deda6e8dc5c8f77b1a387bd1d0"
+    }
+  }
+}
